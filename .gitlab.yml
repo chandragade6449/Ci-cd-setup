@@ -1,30 +1,7 @@
 stages:
   - build
-  - test
-  - deploy
- 
-# Build Stage
-build_job:
-  stage: build
-  script:
-    - echo "Building the project..."
-    - mkdir build
-    - touch build/app
- 
-# Test Stage
-test_job:
-  stage: test
-  script:
-    - echo "Running tests..."
-    - echo "All tests passed!"
- 
-# Deploy Stage
-deploy_job:
-  stage: deploy
-  script:
-    - echo "Deploying the project..."
-    - echo "Deployed successfully!"
-Key Sections:
-stages: defines the order of the pipeline.
-Each job (build_job, test_job, deploy_job) runs during its respective stage.
-script: contains the shell commands to run in each job.
+
+build-job:
+   stage: build
+   script: echo "building the project..."
+   
